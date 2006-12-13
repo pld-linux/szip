@@ -6,7 +6,7 @@ Summary:	SZIP - Science Data Lossless Compression library
 Summary(pl):	SZIP - biblioteka bezstratnej kompresji danych naukowych
 Name:		szip
 Version:	2.0
-Release:	1
+Release:	2
 %if %{with encoder}
 License:	free for non-commercial, scientific use only in HDF software
 %else
@@ -16,8 +16,11 @@ Group:		Libraries
 Source0:	ftp://ftp.ncsa.uiuc.edu/HDF/szip/2.0/src/%{name}-%{version}.tar
 # Source0-md5:	60f5247d9948fda493042fc42c5ca655
 Patch0:		%{name}-opt.patch
+Patch1:		%{name}-link.patch
 URL:		http://hdf.ncsa.uiuc.edu/HDF5/doc_resource/SZIP/
-BuildRequires:	automake
+BuildRequires:	autoconf >= 2.54
+BuildRequires:	automake >= 1:1.7
+BuildRequires:	libtool >= 1:1.4.2-9
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -67,9 +70,15 @@ Statyczna biblioteka SZIP.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 cp -f /usr/share/automake/config.* bin
+%{__libtoolize}
+%{__aclocal}
+%{__autoheader}
+%{__autoconf}
+%{__automake}
 %configure \
 	%{!?with_encoder:--disable-encoding}
 %{__make}
