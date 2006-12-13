@@ -1,0 +1,17 @@
+--- szip-2.0/examples/Makefile.am.orig	2006-12-13 17:00:24.000000000 +0000
++++ szip-2.0/examples/Makefile.am	2006-12-13 17:00:17.000000000 +0000
+@@ -11,12 +11,12 @@
+ noinst_PROGRAMS = burst_szip example
+ 
+ burst_szip_SOURCES = burst_szip.c
+-burst_szip_LDADD =  ../test/libmcgill.la ../src/libsz.la
++burst_szip_LDADD =  ../test/libmcgill.la ../src/libsz.la -lm
+ burst_szip_DEPENDENCIES = ../test/libmcgill.la ../src/libsz.la
+ 
+ 
+ example_SOURCES = example.c
+-example_LDADD = ../src/libsz.la
++example_LDADD = ../src/libsz.la -lm
+ example_DEPENDENCIES = ../src/libsz.la
+ 
+ #############################################################################
