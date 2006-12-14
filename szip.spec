@@ -73,7 +73,6 @@ Statyczna biblioteka SZIP.
 %patch1 -p1
 
 %build
-cp -f /usr/share/automake/config.* bin
 %{__libtoolize}
 %{__aclocal}
 %{__autoheader}
