@@ -3,7 +3,7 @@
 %bcond_with	encoder		# build with encoder (may require license)
 #
 Summary:	SZIP - Science Data Lossless Compression library
-Summary(pl.UTF-8):   SZIP - biblioteka bezstratnej kompresji danych naukowych
+Summary(pl.UTF-8):	SZIP - biblioteka bezstratnej kompresji danych naukowych
 Name:		szip
 Version:	2.0
 Release:	2
@@ -45,7 +45,7 @@ programistów UNM.
 
 %package devel
 Summary:	Header files for SZIP library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki SZIP
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki SZIP
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -57,7 +57,7 @@ Pliki nagłówkowe biblioteki SZIP.
 
 %package static
 Summary:	Static SZIP library
-Summary(pl.UTF-8):   Statyczna biblioteka SZIP
+Summary(pl.UTF-8):	Statyczna biblioteka SZIP
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
