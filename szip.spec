@@ -3,7 +3,7 @@
 %bcond_with	encoder		# build with encoder (may require license)
 #
 Summary:	SZIP - Science Data Lossless Compression library
-Summary(pl):	SZIP - biblioteka bezstratnej kompresji danych naukowych
+Summary(pl.UTF-8):   SZIP - biblioteka bezstratnej kompresji danych naukowych
 Name:		szip
 Version:	2.0
 Release:	2
@@ -33,38 +33,38 @@ Observatory System (EOS). It was originally developed at University of
 New Mexico (UNM) and integrated with HDF4 by UNM researchers and
 developers.
 
-%description -l pl
+%description -l pl.UTF-8
 SZIP to implementacja rozszerzonego algorytmu kompresji bezstratnej
 Rice'a. CCSDS (Consultative Committee on Space Data Systems)
-zaadoptowa³o rozszerzony algorytm Rice'a na potrzeby miêdzynarodowych
-standardów aplikacji przestrzennych. SZIP daje szybk± i efektywn±
-kompresjê, szczególnie dla danych EOS generowanych przez NASA Earth
-Observatory System (EOS). Pierwotnie biblioteka zosta³a stworzona w
-University of New Mexico (UNM) i zintegrowana z HDF4 przez naukowców i
-programistów UNM.
+zaadoptowaÅ‚o rozszerzony algorytm Rice'a na potrzeby miÄ™dzynarodowych
+standardÃ³w aplikacji przestrzennych. SZIP daje szybkÄ… i efektywnÄ…
+kompresjÄ™, szczegÃ³lnie dla danych EOS generowanych przez NASA Earth
+Observatory System (EOS). Pierwotnie biblioteka zostaÅ‚a stworzona w
+University of New Mexico (UNM) i zintegrowana z HDF4 przez naukowcÃ³w i
+programistÃ³w UNM.
 
 %package devel
 Summary:	Header files for SZIP library
-Summary(pl):	Pliki nag³ówkowe biblioteki SZIP
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki SZIP
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for SZIP library.
 
-%description devel -l pl
-Pliki nag³ówkowe biblioteki SZIP.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki SZIP.
 
 %package static
 Summary:	Static SZIP library
-Summary(pl):	Statyczna biblioteka SZIP
+Summary(pl.UTF-8):   Statyczna biblioteka SZIP
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static SZIP library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka SZIP.
 
 %prep
