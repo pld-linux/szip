@@ -16,7 +16,7 @@ Group:		Libraries
 Source0:	ftp://ftp.hdfgroup.org/lib-external/szip/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	9cc9125a58b905a4148e4e2fda3fabc6
 Patch0:		%{name}-opt.patch
-URL:		http://hdf.ncsa.uiuc.edu/HDF5/doc_resource/SZIP/
+URL:		http://hdf.ncsa.uiuc.edu/doc_resource/SZIP/
 BuildRequires:	autoconf >= 2.54
 BuildRequires:	automake >= 1:1.7
 BuildRequires:	libtool >= 1:1.4.2-9
