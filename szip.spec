@@ -16,6 +16,7 @@ Group:		Libraries
 Source0:	ftp://ftp.hdfgroup.org/lib-external/szip/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	9cc9125a58b905a4148e4e2fda3fabc6
 Patch0:		%{name}-opt.patch
+Patch1:		%{name}-linking.patch
 URL:		http://hdf.ncsa.uiuc.edu/doc_resource/SZIP/
 BuildRequires:	autoconf >= 2.54
 BuildRequires:	automake >= 1:1.7
@@ -69,6 +70,7 @@ Statyczna biblioteka SZIP.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__libtoolize}
@@ -95,7 +97,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc COPYING RELEASE.txt
-%attr(755,root,root) %{_libdir}/libsz.so.*.*.*
+%attr(755,root,root) %{_libdir}/libsz.so.2.*.*
+%attr(755,root,root) %ghost %{_libdir}/libsz.so.2
 
 %files devel
 %defattr(644,root,root,755)
