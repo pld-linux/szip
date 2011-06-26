@@ -1,20 +1,20 @@
 #
 # Conditional build:
-%bcond_with	encoder		# build with encoder (may require license)
+%bcond_without	encoder		# build with encoder (using may require license)
 #
 Summary:	SZIP - Science Data Lossless Compression library
 Summary(pl.UTF-8):	SZIP - biblioteka bezstratnej kompresji danych naukowych
 Name:		szip
 Version:	2.1
-Release:	1
+Release:	2
 %if %{with encoder}
-License:	free for non-commercial, scientific use only in HDF software
+License:	free for use in HDF software (decoder), free for non-commercial, scientific use only in HDF software (encoder)
 %else
 License:	free for use in HDF software
 %endif
 Group:		Libraries
-Source0:	ftp://ftp.hdfgroup.org/lib-external/szip/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	9cc9125a58b905a4148e4e2fda3fabc6
+Source0:	ftp://ftp.hdfgroup.org/lib-external/szip/%{version}/src/%{name}-%{version}.tar.gz
+# Source0-md5:	63894a65bc470011fd2049f3ca65d2bf
 Patch0:		%{name}-opt.patch
 Patch1:		%{name}-linking.patch
 URL:		http://hdf.ncsa.uiuc.edu/doc_resource/SZIP/
@@ -96,7 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING RELEASE.txt
+%doc COPYING HISTORY.txt RELEASE.txt
 %attr(755,root,root) %{_libdir}/libsz.so.2.*.*
 %attr(755,root,root) %ghost %{_libdir}/libsz.so.2
 
@@ -104,7 +104,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libsz.so
 %{_libdir}/libsz.la
-%{_includedir}/*.h
+%{_includedir}/ricehdf.h
+%{_includedir}/szip_adpt.h
+%{_includedir}/szlib.h
 
 %files static
 %defattr(644,root,root,755)
