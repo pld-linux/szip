@@ -6,7 +6,7 @@ Summary:	SZIP - Science Data Lossless Compression library
 Summary(pl.UTF-8):	SZIP - biblioteka bezstratnej kompresji danych naukowych
 Name:		szip
 Version:	2.1
-Release:	2
+Release:	3
 %if %{with encoder}
 License:	free for use in HDF software (decoder), free for non-commercial, scientific use only in HDF software (encoder)
 %else
