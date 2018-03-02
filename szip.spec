@@ -13,7 +13,7 @@ License:	free for use in HDF software (decoder), free for non-commercial, scient
 License:	free for use in HDF software
 %endif
 Group:		Libraries
-Source0:	https://support.hdfgroup.org/ftp/lib-external/szip/%{version}/src/%{name}-%{version}.tar.gz
+Source0:	%{name}-%{version}.tar.gz
 # Source0-md5:	5addbf2a5b1bf928b92c47286e921f72
 Patch0:		%{name}-opt.patch
 URL:		https://support.hdfgroup.org/doc_resource/SZIP/
